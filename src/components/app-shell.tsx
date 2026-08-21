@@ -21,7 +21,7 @@ export const navItems = [
   { to: "/chat", label: "AI Assistant", icon: MessageSquare },
 ] as const;
 
-function NavList({ onNavigate }: { onNavigate?: () => void }) {
+function NavList({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <nav className="flex-1 space-y-1 px-4">
       {navItems.map(({ to, label, icon: Icon }) => (
